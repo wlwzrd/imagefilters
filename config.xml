@@ -2,16 +2,17 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "com.phonegap.example"
-    version   = "1.0.0">
+    version   = "0.0.1">
 
-<name>PhoneGap Build Application</name>
+<name>Ultragram</name>
 
 <description>
-A simple PhoneGap Build application.
+Image Filters with WebKit css
 </description>
 
-<author href="https://example.com" email="you@example.com">
-Your Name
+<author href="http://soportegyc.com" email="mfdogutierrez@gmail.com">
+Mario Fernando Gutierrez
 </author>
+
 
 </widget>
