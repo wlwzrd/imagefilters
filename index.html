@@ -2,64 +2,162 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Aplic. Web de jQuery Mobile</title>
+<title>PPI WEBKIT</title>
 <link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
 <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
 </head> 
-<body> 
+
+
+<body>
 
 <div data-role="page" id="page">
-	<div data-role="header">
-		<h1>Página uno</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Página dos</a></li>
-            <li><a href="#page3">Página tres</a></li>
-			<li><a href="#page4">Página cuatro</a></li>
-		</ul>		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
+
+        <div data-role="header">
+                <h1>PPI WEB KIT MOBILE</h1>
+        </div>
+        
+        <div data-role="content">        
+                <ul data-role="listview">
+                        <li><a href="#page2">IMAGE CSS Filters</a></li>
+            			<li><a href="#page3">VIDEO CSS Filters</a></li>
+                        <li><a href="#page4">Proyecto</a></li>
+                </ul>                
+        </div>
+        
+        <div data-role="footer">
+                <h4>Tecnologías Multimedia</h4>
+        </div>
 </div>
+
+
 
 <div data-role="page" id="page2">
-	<div data-role="header">
-		<h1>Página dos</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
+        <div data-role="header">
+                <h1>IMAGE CSS Filters</h1>
+        </div>
+        <div id="photo">
+		<a href="#" class="downloadImage" target="_blank" download="photo.png">Descargar Imagen</a>
+		</div>
+        <div data-role="content">        
+                <img src="../../../Desktop/Sitio sin nombre 2/543338_10151416896796424_705439835_n.jpg">
+  		<div id="filterContainer">
+		<ul id="filters">
+			<li> <a href="#" id="normal">Normal</a> </li>
+			<li> <a href="#" id="vintage">Vintage</a> </li>
+			<li> <a href="#" id="lomo">Lomo</a> </li>
+			<li> <a href="#" id="clarity">Clarity</a> </li>
+			<li> <a href="#" id="sinCity">Sin City</a> </li>
+			<li> <a href="#" id="sunrise">Sunrise</a> </li> 
+			<li> <a href="#" id="crossProcess">Cross Process</a> </li>
+			<li> <a href="#" id="orangePeel">Orange Peel</a> </li>
+			<li> <a href="#" id="love">Love</a> </li>
+			<li> <a href="#" id="grungy">Grungy</a> </li>
+			<li> <a href="#" id="jarques">Jarques</a> </li>
+			<li> <a href="#" id="pinhole">Pinhole</a> </li>
+			<li> <a href="#" id="oldBoot">Old Boot</a> </li>
+			<li> <a href="#" id="glowingSun">Glowing Sun</a> </li>
+			<li> <a href="#" id="hazyDays">Hazy Days</a> </li>
+			<li> <a href="#" id="herMajesty">Her Majesty</a> </li>
+			<li> <a href="#" id="nostalgia">Nostalgia</a> </li>
+			<li> <a href="#" id="hemingway">Hemingway</a> </li>
+			<li> <a href="#" id="concentrate">Concentrate</a> </li>
+		</ul>
+	</div>	
+				            
+        </div>
+     
 </div>
+
 
 <div data-role="page" id="page3">
-	<div data-role="header">
-		<h1>Página tres</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
+        <div data-role="header">
+                <h1>VIDEO CSS Filters</h1>
+        </div>
+        <div data-role="content">        
+                <video width="320" height="240" controls autoplay>
+  				<source src="capture-1.mp4" type="video/mp4">
+ 		 		<object data="capture-1.mp4" width="320" height="240">
+    				<embed width="320" height="240" src="capture-1.swf">
+  				</object>
+				</video>             
+        </div>
+        <output>-webkit-filter: none;</output>
+        <div data-role="collapsible-set" data-content-theme="c">
+        
+    		<div data-role="collapsible" data-theme="b" data-content-theme="e">
+        		<h3>BLUR</h3>
+        			<input type="range" onchange="set('blur', this.value + 'px');" value="0" step="1" min="0" max="10">
+    		</div>
+            
+    		<div data-role="collapsible" data-theme="e" data-content-theme="b">
+        		<h3>GRAYSCALE</h3>
+        		<input type="range" onchange="set('grayscale', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+    		</div>
+            
+    		<div data-role="collapsible" data-theme="b" data-content-theme="e">
+        		<h3>SEPIA</h3>
+        		<input type="range" onchange="set('sepia', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+    		</div>
+            
+            <div data-role="collapsible" data-theme="e" data-content-theme="b">
+        		<h3>BRIGHTNESS</h3>
+        		<input type="range" onchange="set('brightness', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+    		</div>
+            
+             <div data-role="collapsible" data-theme="b" data-content-theme="e">
+        		<h3>CONTRAST</h3>
+        		<input type="range" onchange="set('contrast', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+    		</div>
+            
+             <div data-role="collapsible" data-theme="e" data-content-theme="b">
+        		<h3>HUE-ROTATE</h3>
+        		<input type="range" onchange="set('hue-rotate', this.value + 'deg');" value="0" step="30" min="0" max="360">
+    		</div>
+            
+             <div data-role="collapsible" data-theme="b" data-content-theme="d">
+        		<h3>INVERT</h3>
+        		<input type="range" onchange="set('invert', this.valueAsNumber);" value="0" step="0.1" min="0" max="1">
+    		</div>
+            
+             <div data-role="collapsible" data-theme="e" data-content-theme="d">
+        		<h3>SATURATE</h3>
+        		<input type="range" onchange="set('saturate', this.valueAsNumber);" value="0" step="0.1" min="0" max="10">
+    		</div>
+            
+            <script>
+				var FILTER_VALS = {};
+				var el = document.querySelector('video');
+	
+				function set(filter, value) {
+					  FILTER_VALS[filter] = typeof value == 'number' ? Math.round(value * 10) / 10 : value;
+					  if (value == 0 || (typeof value == 'string' && value.indexOf('0') == 0)) {
+						delete FILTER_VALS[filter];
+					  }
+					  render();
+				}
+				
+				function render() {
+					  var vals = [];
+					  Object.keys(FILTER_VALS).sort().forEach(function(key, i) {
+						vals.push(key + '(' + FILTER_VALS[key] + ')');
+					  });
+					  var val = vals.join(' ');
+					  el.style.webkitFilter = val;
+					  document.querySelector('output').textContent = '-webkit-filter: ' + (val ? val : 'none') + ';';
+				}
+			</script>
+            
+        </div>
+        <div data-role="footer">
+                <h4>Tecnologías Multimedia</h4>
+        </div>
 </div>
+    
 
-<div data-role="page" id="page4">
-	<div data-role="header">
-		<h1>Página cuatro</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div data-role="footer">
-		<h4>Pie de página</h4>
-	</div>
-</div>
 
-</body>
-</html>
+
+
+
+</body></html>
